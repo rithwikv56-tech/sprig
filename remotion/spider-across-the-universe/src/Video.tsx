@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 import { Ending } from "./Ending";
 import { Glitch, Portal, PrintTexture } from "./Effects";
 import { Scene, heroAt } from "./Scene";
@@ -62,6 +62,7 @@ export const SpiderAcrossTheUniverse: React.FC = () => {
     <AbsoluteFill style={{ background: "#000" }}>
       {content}
       <PrintTexture />
+      <Audio src={staticFile("audio/soundtrack.mp3")} />
     </AbsoluteFill>
   );
 };
